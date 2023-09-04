@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My personal portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/61682c6edc.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/rlogo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm <span>Rahul Gafoor</span><br>shaik From India</h1>
+            </div>
+        </div>
+    </div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/background.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+
+                <p>Rahul is a popular male name in India and has a variety of meanings.
+                    The earliest meaning found in the Upanishads is "conqueror of all miseries."
+                    Later use of the word is attributed to the Buddha, 
+                    who named his son Rahul as he felt that family ties could be an obstacle in the path
+                    to renunciation and nirvana.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Designing</span><br>Designing web interfaces</li>
+                        <li><span>Java</span><br>Programing Developer</li>
+                        <li><span>Mysql</span><br>For DataBase</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>Major Project in College</li>
+                        <li><span>2022</span><br>Internship on CyberSecurity</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019 - 2023</span><br>Bacheolor of Technology</li>
+                        <li><span>2017 - 2019</span><br>Intermediate</li>
+                        <li><span>2016 - 2017</span><br>High School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!------------services-------------->
+
+
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code-fork"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus quis nulla! 
+                    Ratione quisquam eligendi,omnis est repudiandae atque dolor magnam.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Program Developer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus quis nulla! 
+                    Ratione quisquam eligendi,omnis est repudiandae atque dolor magnam.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>DBMS expertise</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus quis nulla! 
+                    Ratione quisquam eligendi,omnis est repudiandae atque dolor magnam.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--------------portfolio----------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.png">
+                <div class="layer">
+                    <h3>Work Hard</h3>
+                    <p>Persistence is continued, extended effort toward a goal or outcome,
+                        regardless of challenges or obstacles.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Social Media</h3>
+                    <p>Social media refers to the means of interactions among people in which they create,
+                        share, and/or exchange information and ideas in virtual communities and networks
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Smart Work</h3>
+                    <p>model of work that uses new technologies and the development of existing technologies
+                        to improve both the performance and the satisfaction that is obtained from the job.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+</body>
+</html>
